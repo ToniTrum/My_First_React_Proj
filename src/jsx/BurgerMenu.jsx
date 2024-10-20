@@ -18,14 +18,16 @@ const BurgerMenu = () => {
             </div>
 
             <nav className={`burger-menu_menu ${isOpen ? 'open' : ''}`}>
-                <ul>
+                <ul className='nav_ul'>
                     {/* map() -- создает новый массив, заполненный 
                         результатами вызова предоставленной функции 
                         для каждого элемента в вызывающем массиве.
                         В данном случае из массива достаются названия
                         элементов меню и отображаются с тегом li*/}
                     {navigation.elements.map((element) => (
-                        <li>{element}</li>
+                        <li className='nav_ul_li'>
+                            <a className='nav_ul_li_ref' href="#" target="_blank">{element}</a>
+                        </li>
                     ))}
                 </ul>
             </nav>
