@@ -1,0 +1,57 @@
+header {
+    background-color: black;
+    width: 100vw;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+}
+
+.header_title {
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+/* keyframes управляет промежуточными шагами в последовательности анимации CSS
+   В from указывается начальное положение, в to -- конечное
+   transform: rotate() -- переворачивает элемент на определённый угол */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header_logo {
+    margin-right: 2vw;
+    margin-left: 2vw;
+    width: 3.2vw;
+    /* animation -- свойство для задания анимации
+       rotate -- имя анимации, которое было задано ранее
+       4s -- время продолжительности анимации
+       ease-in-out -- указывает, что анимация начинается медленно, 
+                      ускоряется, а затем замедляется к концу. 
+                      В начале оно ведет себя как ease-in.
+                      В конце оно похоже на ease-out.
+       infinite -- продолжительность анимации (БЕСКОНЕЧНОСТЬ НЕ ПРЕДЕЛ) */
+    animation: rotate 4s ease-in-out infinite;
+}
+
+@media (max-width: 400px) {
+    .header_title {
+        font-size: 6.5vw;
+        margin-top: 4.5vw;
+        margin-bottom: 4.5vw;
+    }
+
+    .header_logo {
+        margin-right: 4.5vw;
+        margin-left: 4.5vw;
+        width: 6.7vw;
+    }
+}
