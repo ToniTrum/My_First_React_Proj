@@ -43,6 +43,20 @@ header {
     animation: rotate 4s ease-in-out infinite;
 }
 
+@media (max-width: 800px) {
+    .header_title {
+        font-size: 5vw;
+        margin-top: 3.7vw;
+        margin-bottom: 3.7vw;
+    }
+
+    .header_logo {
+        margin-right: 3.7vw;
+        margin-left: 3.7vw;
+        width: 5.2vw;
+    }
+}
+
 @media (max-width: 400px) {
     .header_title {
         font-size: 6.5vw;
