@@ -19,7 +19,7 @@ header {
 /* keyframes управляет промежуточными шагами в последовательности анимации CSS
    В from указывается начальное положение, в to -- конечное
    transform: rotate() -- переворачивает элемент на определённый угол */
-@keyframes rotate {
+@keyframes spin {
     from {
         transform: rotate(0deg);
     }
@@ -40,7 +40,7 @@ header {
                       В начале оно ведет себя как ease-in.
                       В конце оно похоже на ease-out.
        infinite -- продолжительность анимации (БЕСКОНЕЧНОСТЬ НЕ ПРЕДЕЛ) */
-    animation: rotate 4s ease-in-out infinite;
+    animation: spin 4s ease-in-out infinite;
 }
 
 @media (max-width: 800px) {

@@ -1,4 +1,4 @@
-import reactLogo from '../img/react.svg'
+import reactLogo from '../img/react-logo.svg'
 import { Component } from 'react'
 import '../css/Header.css'
 

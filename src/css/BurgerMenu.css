@@ -67,39 +67,6 @@
 .burger-menu_menu.open {
     right: 0;
 }
-  
-.nav_ul {
-    list-style: none;
-    text-align: center;
-}
-  
-.nav_ul_li {
-    margin-bottom: 2vw;
-}
-
-.nav_ul_li:last-child {
-    margin-bottom: 0;
-}
-  
-.nav_ul_li_ref {
-    outline: none;
-    text-decoration: none;
-    font-size: 2vw;
-}
-
-.nav_ul_li_ref:visited {
-    color: rgba(245, 236, 236, 0.78);
-}
-
-.nav_ul_li_ref:hover {
-    border-bottom: 0.2vw solid;
-    background: #e9dede93;
-}
-
-.nav_ul_li_ref:active {
-    background: #e9dede5e;
-    color: rgba(245, 236, 236, 0.568);;
-}
 
 @media (max-width: 800px) {
     .burger-menu {
@@ -127,14 +94,6 @@
         top: 12.4vw;
         width: 50%;
     }
-
-    .nav_ul_li {
-        margin-bottom: 4vw;
-    }
-      
-    .nav_ul_li_ref {
-        font-size: 3vw;
-    }
 }
 
 @media (max-width: 400px) {
@@ -158,9 +117,5 @@
     .burger-menu_menu {
         top: 15.5vw;
         width: 60%;
-    }
-      
-    .nav_ul_li_ref {
-        font-size: 4vw;
     }
 }
