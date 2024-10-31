@@ -1,0 +1,38 @@
+.section-title__title {
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 500;
+    
+    display: inline-block;
+    margin: 0;
+    border-right: .15em solid;
+
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2.5s steps(31, jump-start) forwards, blinking 1s infinite;
+    /* steps -- описывает, за сколько шагов должно произойти изменение свойства.
+    Первый параметр указывает количество шагов, за которое будет изменено свойство. 
+    При этом каждый шаг будет отображаться равное количество времени.
+    Второй параметр определяет логику, по которой будет разделён промежуток на отрезки
+
+    31 -- количество шагов
+    jump-start -- на 20%, 40%, 60%, 80% и 100% с задержками по 1/5 от общего времени */
+}
+
+/* Анимация печатной машинки */
+@keyframes typing {
+    from { 
+        width: 0 
+    }
+    to {
+        width: 100% 
+    }
+}
+
+/* анимация мигания курсора */
+@keyframes blinking {
+    0% {border-color: transparent}
+    50% {border-color: #08e0dc}
+    100% {border-color: transparent}
+}

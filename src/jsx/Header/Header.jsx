@@ -1,12 +1,10 @@
-import reactLogo from '../img/react-logo.svg'
+import reactLogo from '../../img/react-logo.svg'
 import { Component } from 'react'
-import '../css/Header.css'
-
+import '../../css/Header/Header.css'
 import BurgerMenu from './BurgerMenu.jsx'
 
 
-/* React позволяет определять компоненты как классы или функции. 
-    */
+/* React позволяет определять компоненты как классы или функции. */
 class Header extends Component {
     render() {
         return (

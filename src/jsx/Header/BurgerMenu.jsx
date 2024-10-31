@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../css/BurgerMenu.css'
+import '../../css/Header/BurgerMenu.css'
 import BurgerMenuItemList from './BurgerMenuItemList.jsx'
 
 const BurgerMenu = () => {
@@ -11,6 +11,7 @@ const BurgerMenu = () => {
 
     return (
         <div className='burger-menu'>
+            {/* onClick -- отслеживание собития нажатия на элемент */}
             <div className={`burger-menu_button ${isOpen ? 'open' : ''}`} onClick={onClick}>
                 <div className="line"></div>
                 <div className="line"></div>
