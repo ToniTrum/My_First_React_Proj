@@ -14,7 +14,7 @@
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: typing 2.5s steps(31, jump-start) forwards, blinking 1.5s infinite;
+    animation: typing 2.5s steps(32, jump-start) forwards, blinking-cursor 1.5s infinite;
     /* steps -- описывает, за сколько шагов должно произойти изменение свойства.
     Первый параметр указывает количество шагов, за которое будет изменено свойство. 
     При этом каждый шаг будет отображаться равное количество времени.
@@ -35,7 +35,7 @@
 }
 
 /* анимация мигания курсора */
-@keyframes blinking {
+@keyframes blinking-cursor {
     0% {border-color: transparent}
     50% {border-color: #08e0dc}
     100% {border-color: transparent}
