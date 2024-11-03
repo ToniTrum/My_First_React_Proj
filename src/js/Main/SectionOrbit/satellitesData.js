@@ -10,32 +10,38 @@ const satellitesData = [
     {
         "className": "react",
         "img": reactLogo,
-        "alt": "React logo"
+        "alt": "React logo",
+        "href": "https://react.dev/"
     },
     {
         "className": "vite",
         "img": viteLogo,
-        "alt": "Vite logo"
+        "alt": "Vite logo",
+        "href": "https://vite.dev/"
     },
     {
         "className": "javascript",
         "img": javaScriptLogo,
-        "alt": "JavaScript logo"
+        "alt": "JavaScript logo",
+        "href": "https://www.javascript.com/"
     },
     {
         "className": "framer_motion",
         "img": framerMotionLogo,
-        "alt": "Framer Motion logo"
+        "alt": "Framer Motion logo",
+        "href": "https://www.framer.com/"
     },
     {
         "className": "html",
         "img": htmlLogo,
-        "alt": "HTML logo"
+        "alt": "HTML logo",
+        "href": "https://html.com/"
     },
     {
         "className": "css",
         "img": cssLogo,
-        "alt": "CSS logo"
+        "alt": "CSS logo",
+        "href": "https://css3.com/"
     },
 ]
 

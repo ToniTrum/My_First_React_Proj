@@ -16,10 +16,10 @@ const Satellites = ({ellipseRef}) => {
     useEffect(() => {
         const updateEllipseData = () => {
             if (ellipseRef.current) {
-                const rx = ellipseRef.current.rx.baseVal.value;
-                const ry = ellipseRef.current.ry.baseVal.value;
-                const cx = ellipseRef.current.cx.baseVal.value;
-                const cy = ellipseRef.current.cy.baseVal.value;
+                const rx = ellipseRef.current.rx.baseVal.value
+                const ry = ellipseRef.current.ry.baseVal.value
+                const cx = ellipseRef.current.cx.baseVal.value
+                const cy = ellipseRef.current.cy.baseVal.value
 
                 setEllipseData({
                     "rx": rx,
@@ -40,7 +40,7 @@ const Satellites = ({ellipseRef}) => {
 
         return () => {
             // Добавление удаление события изменения размера окна
-            window.removeEventListener('resize', updateEllipseData);
+            window.removeEventListener('resize', updateEllipseData)
         }
     }, [ellipseRef])
 
@@ -68,7 +68,7 @@ const Satellites = ({ellipseRef}) => {
                     return { x: posX, y: posY }
                 })
             )
-            angle = (angle + 0.3) % 360
+            angle = (angle + 0.2) % 360
             /* requestAnimationFrame -- указывает браузеру на то, что необходимо произвести 
                анимацию, и просит его запланировать перерисовку на следующем кадре анимации. 
                В качестве параметра метод получает функцию, которая будет вызвана перед 
@@ -86,7 +86,10 @@ const Satellites = ({ellipseRef}) => {
     return (
         <>
             {satellitesData.map((satellite, index) => (
-                <motion.img
+                <motion.a
+                href={satellite.href}
+                target='_blank' >
+                    <motion.img
                     key={index}
                     className={`section-orbit__satellite ${satellite.className}`}
                     src={satellite.img}
@@ -94,10 +97,10 @@ const Satellites = ({ellipseRef}) => {
                     style={{ 
                         transform: `translate(${satellitePositions[index]?.x || 0}px, ${satellitePositions[index]?.y || 0}px)` 
                     }}
-                />
+                /></motion.a>
             ))}
         </>
-    );
+    )
 }
 
 export default Satellites

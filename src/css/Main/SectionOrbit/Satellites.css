@@ -1,5 +1,31 @@
 .section-orbit__satellite {
     position: absolute;
     width: 8%;
+    will-change: filter;
+    transition: filter 300ms;
+    filter: drop-shadow(0 0 1em #ffffff7b);
 }
 
+.react:hover {
+    filter: drop-shadow(0 0 2em #61dafb);
+}
+
+.vite:hover {
+    filter: drop-shadow(0 0 2em #e955f7);
+}
+
+.javascript:hover {
+    filter: drop-shadow(0 0 2em #fffb00);
+}
+
+.framer_motion:hover {
+    filter: drop-shadow(0 0 2em #fe65f6);
+}
+
+.html:hover {
+    filter: drop-shadow(0 0 2em #ff6a1f);
+}
+
+.css:hover {
+    filter: drop-shadow(0 0 2em #384aef);
+}
