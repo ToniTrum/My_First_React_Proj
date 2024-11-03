@@ -1,15 +1,13 @@
-import '../../css/Main/Satellites.css'
+import '../../../css/Main/SectionOrbit/Satellites.css'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-
-import reactLogo from '../../img/react-logo.svg'
-import viteLogo from '../../img/vite-logo.svg'
+import satellitesData from './satellitesData'
 
 const Satellites = ({ellipseRef}) => {
     const [ellipseData, setEllipseData] = useState(null)
     const [satelliteRadius, setSatelliteRadius] = useState(0)
     const [angle, setAngle] = useState(0)
-    const [satellitePosition, setSatellitePosition] = useState({ x: 0, y: 0 })
+    const [satellitePositions, setSatellitePositions] = useState([])
 
     /* useEffect -- это хук, который можно использовать для замены некоторых 
        методов жизненного цикла классового компонента. 
@@ -48,53 +46,56 @@ const Satellites = ({ellipseRef}) => {
 
 
     useEffect(() => {
-        if (!ellipseData) return
+        const intervals = satellitesData.map((satellite, index) =>
+            setInterval(() => {
+                setSatellitePositions((prevPositions) => {
+                    const newPositions = [...prevPositions]
+                    const angleInRadians = (satellite.initialAngle + angle) * Math.PI / 180
+                    const eccentricity = Math.sqrt(1 - Math.pow(ellipseData.ry / ellipseData.rx, 2))
+                    const ellipseRadiusAtSelectedPoint = ellipseData.ry / Math.sqrt(1 - Math.pow(eccentricity * Math.cos(angleInRadians), 2))
 
-        const computePosition = () => {
-            const angleInRadians = angle * Math.PI / 180
-            // Эксцентриситент
-            const eccentricity = Math.sqrt(1 - Math.pow(ellipseData.ry / ellipseData.rx, 2))
-            // Радиус эллипса в выбранной точке
-            const ellipseRadiusAtSelectedPoint = ellipseData.ry / Math.sqrt(1 - Math.pow(eccentricity * Math.cos(angleInRadians), 2))
-    
-            const posX = ellipseData.cx + ellipseRadiusAtSelectedPoint * Math.cos(angleInRadians) - satelliteRadius
-            const posY = ellipseData.cy + ellipseRadiusAtSelectedPoint * Math.sin(angleInRadians) - satelliteRadius
-    
-            setSatellitePosition({
-                "x": posX,
-                "y": posY
-            })
-        }
+                    const posX = ellipseData.cx + ellipseRadiusAtSelectedPoint * Math.cos(angleInRadians) - satelliteRadius
+                    const posY = ellipseData.cy + ellipseRadiusAtSelectedPoint * Math.sin(angleInRadians) - satelliteRadius
 
-        computePosition()
-    }, [angle, ellipseData, satelliteRadius])
+                    newPositions[index] = { x: posX, y: posY }
+                    return newPositions
+                })
+            }, 300)
+        )
+
+        return () => intervals.forEach(clearInterval)
+    }, [ellipseData, satelliteRadius, angle, satellitesData])
 
 
     useEffect(() => {
         const interval = setInterval(() => {
             setAngle((prevAngle) => (prevAngle + 1) % 360)
-        }, 100) // примерно 60 FPS
+        }, 300)
 
         return () => clearInterval(interval)
     }, [])
 
+
     return (
         <>
-        <motion.img
-        className='section-orbit__satellite' 
-        src={reactLogo} 
-        alt="React Logo"
-        animate={{
-            y: satellitePosition.y,
-            x: satellitePosition.x
-        }}
-        transition={{
-            type: "spring", 
-            stiffness: 50 
-        }} />
-        {/* <motion.img className='section-orbit__satellite' src={viteLogo} alt="React Logo" /> */}
+            {satellitesData.map((satellite, index) => (
+                <motion.img
+                    key={index}
+                    className='section-orbit__satellite ${satellite.className}'
+                    src={satellite.img}
+                    alt={satellite.alt}
+                    animate={{
+                        y: satellitePositions[index]?.y || 0,
+                        x: satellitePositions[index]?.x || 0
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 50,
+                    }}
+                />
+            ))}
         </>
-    )
+    );
 }
 
 export default Satellites
