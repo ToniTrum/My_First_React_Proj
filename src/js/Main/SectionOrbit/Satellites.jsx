@@ -6,7 +6,6 @@ import satellitesData from './satellitesData'
 const Satellites = ({ellipseRef}) => {
     const [ellipseData, setEllipseData] = useState(null)
     const [satelliteRadius, setSatelliteRadius] = useState(0)
-    const [angle, setAngle] = useState(0)
     const [satellitePositions, setSatellitePositions] = useState([])
 
     /* useEffect -- это хук, который можно использовать для замены некоторых 
@@ -36,44 +35,52 @@ const Satellites = ({ellipseRef}) => {
         }
 
         updateEllipseData()
-        /* Обработчик события изменения размера окна */ 
+        // Добавление слушателя события изменения размера окна
         window.addEventListener('resize', updateEllipseData)
 
         return () => {
+            // Добавление удаление события изменения размера окна
             window.removeEventListener('resize', updateEllipseData);
         }
     }, [ellipseRef])
 
 
     useEffect(() => {
-        const intervals = satellitesData.map((satellite, index) =>
-            setInterval(() => {
-                setSatellitePositions((prevPositions) => {
-                    const newPositions = [...prevPositions]
-                    const angleInRadians = (satellite.initialAngle + angle) * Math.PI / 180
+        if (!ellipseData) return
+        
+        // Начальный угол, от которого будут отчситываться углы спутников
+        let angle = 0 
+
+        const animateSatellites = () => {
+            setSatellitePositions(
+                satellitesData.map((satellite) => {
+                    // Угол для элемента в радианах
+                    const currentAngle = (satellite.initialAngle + angle) * Math.PI / 180
+                    // Эксцентриситет эллипса
                     const eccentricity = Math.sqrt(1 - Math.pow(ellipseData.ry / ellipseData.rx, 2))
-                    const ellipseRadiusAtSelectedPoint = ellipseData.ry / Math.sqrt(1 - Math.pow(eccentricity * Math.cos(angleInRadians), 2))
+                    // Радиус эллипса в выбранной точке
+                    const ellipseRadiusAtSelectedPoint = ellipseData.ry / Math.sqrt(1 - Math.pow(eccentricity * Math.cos(currentAngle), 2))
 
-                    const posX = ellipseData.cx + ellipseRadiusAtSelectedPoint * Math.cos(angleInRadians) - satelliteRadius
-                    const posY = ellipseData.cy + ellipseRadiusAtSelectedPoint * Math.sin(angleInRadians) - satelliteRadius
+                    // Позиция элемента для выбранного угла
+                    const posX = ellipseData.cx + ellipseRadiusAtSelectedPoint * Math.cos(currentAngle) - satelliteRadius
+                    const posY = ellipseData.cy + ellipseRadiusAtSelectedPoint * Math.sin(currentAngle) - satelliteRadius
 
-                    newPositions[index] = { x: posX, y: posY }
-                    return newPositions
+                    return { x: posX, y: posY }
                 })
-            }, 300)
-        )
+            )
+            angle = (angle + 0.3) % 360
+            /* requestAnimationFrame -- указывает браузеру на то, что необходимо произвести 
+               анимацию, и просит его запланировать перерисовку на следующем кадре анимации. 
+               В качестве параметра метод получает функцию, которая будет вызвана перед 
+               перерисовкой */
+            requestAnimationFrame(animateSatellites)
+        }
 
-        return () => intervals.forEach(clearInterval)
-    }, [ellipseData, satelliteRadius, angle, satellitesData])
-
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setAngle((prevAngle) => (prevAngle + 1) % 360)
-        }, 300)
-
-        return () => clearInterval(interval)
-    }, [])
+        const animationFrameId = requestAnimationFrame(animateSatellites)
+        /* cancelAnimationFrame -- останавливает анимацию, запланированную с помощью 
+        window.requestAnimationFrame() */
+        return () => cancelAnimationFrame(animationFrameId)
+    }, [ellipseData, satelliteRadius])
 
 
     return (
@@ -81,16 +88,11 @@ const Satellites = ({ellipseRef}) => {
             {satellitesData.map((satellite, index) => (
                 <motion.img
                     key={index}
-                    className='section-orbit__satellite ${satellite.className}'
+                    className={`section-orbit__satellite ${satellite.className}`}
                     src={satellite.img}
                     alt={satellite.alt}
-                    animate={{
-                        y: satellitePositions[index]?.y || 0,
-                        x: satellitePositions[index]?.x || 0
-                    }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 50,
+                    style={{ 
+                        transform: `translate(${satellitePositions[index]?.x || 0}px, ${satellitePositions[index]?.y || 0}px)` 
                     }}
                 />
             ))}
