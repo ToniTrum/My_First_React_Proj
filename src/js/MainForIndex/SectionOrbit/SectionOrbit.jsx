@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import '../../../css/Main/SectionOrbit/SectionOrbit.css'
+import '../../../css/MainForIndex/SectionOrbit/SectionOrbit.css'
 import Satellites from './Satellites.jsx';
 
 const SectionOrbit = () => {

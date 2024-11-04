@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-// import '../css/index.css'
+
 
 /* createRoot -- для создания корня React для отображения контента внутри элемента DOM браузера.
    DOM соединяет веб-страницу с языками описания сценариев либо языками программирования. */
