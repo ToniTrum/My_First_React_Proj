@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 
 
@@ -15,6 +16,11 @@ createRoot(document.getElementById('root')).render(
 		Обнаружение устаревшего контекстного API
 		Обеспечение возможности повторного использования */
 	<StrictMode>
-		<App />
+		{/* BrowserRouter -- сохраняет текущее местоположение в адресной строке 
+		    браузера, используя чистые URL-адреса, и осуществляет навигацию, 
+			используя встроенный в браузер стек истории */}
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
 	</StrictMode>,
 )

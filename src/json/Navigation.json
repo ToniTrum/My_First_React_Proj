@@ -2,11 +2,11 @@
     "items": [
         {
             "title": "Главное",
-            "href": "#"
+            "href": "/"
         },
         {
             "title": "О себе",
-            "href": "#"
+            "href": "/about"
         },
         {
             "title": "Опрос",

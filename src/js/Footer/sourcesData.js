@@ -7,14 +7,14 @@ const sourcesData = [
         "height": 2.7,
         "alt": "Git logo",
         "title": "Репозиторий сайта",
-        "href": "#"
+        "href": "https://github.com/ToniTrum/My_First_React_Proj.git"
     },
     {
         "img": gitHubLogo,
         "height": 4.1,
         "alt": "GitHub logo",
         "title": "Профиль на GitHub",
-        "href": "#"
+        "href": "https://github.com/ToniTrum"
     }
 ]
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import navigation from '../../json/Navigation.json'
 import '../../css/Header/BurgerMenuItemList.css'
 
@@ -31,7 +31,7 @@ const BurgerMenuItemList = () => {
                     <a
                     href={item.href}
                     className={"nav_ul_li_ref" + (index === hoveredItem ? " ref_hover" : "")}
-                    style={{color: index === hoveredItem ? "#08e0dc" : 'rgb(245, 236, 236)'}}>
+                    style={{color: index === hoveredItem ? "#08e0dc" : 'rgb(245, 236, 236)'}} >
                         {item.title}
                     </a>
                     {(index === hoveredItem) && (

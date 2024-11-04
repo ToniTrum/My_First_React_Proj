@@ -3,7 +3,7 @@ import '../../css/MainForIndex/Main.css'
 import SectionTitle from './SectionTitle.jsx'
 import SectionOrbit from './SectionOrbit/SectionOrbit.jsx'
 
-const Main = () => {
+const MainForIndex = () => {
     return (
         <main>
             <SectionTitle />
@@ -12,4 +12,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default MainForIndex

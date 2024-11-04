@@ -31,7 +31,7 @@ const Footer = () => {
                         src={item.img}
                         alt={item.alt} />
                         <h3 className='footer-sources__text'>
-                            <a href={item.href}>{item.title}</a>
+                            <a target='_blank' href={item.href}>{item.title}</a>
                         </h3>
                     </div>
                 ))}
