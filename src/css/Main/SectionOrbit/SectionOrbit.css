@@ -1,5 +1,7 @@
 .section-orbit {
 	position: relative;
+	height: 34vw;
+	margin-bottom: 7vw;
 }
 
 svg {

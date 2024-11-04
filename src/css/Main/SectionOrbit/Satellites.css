@@ -1,6 +1,10 @@
 .section-orbit__satellite {
     position: absolute;
     width: 8%;
+    /* will-change: filter -- подсказывает браузеру, что в будущем у элемента 
+       может измениться свойство filter. Это позволяет браузеру заранее 
+       оптимизировать производительность для анимаций или эффектов, которые 
+       будут применяться к filter, снижая потенциальные задержки */
     will-change: filter;
     transition: filter 300ms;
     filter: drop-shadow(0 0 1em #ffffff7b);
