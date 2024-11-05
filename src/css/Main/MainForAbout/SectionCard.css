@@ -24,3 +24,30 @@
     font-weight: 500;
     color: #5fdefbda;
 }
+
+@media (max-width: 800px) {
+    .card-tytle {
+        font-size: 5.2vw;
+        margin-bottom: 2.7vw;
+    }
+
+    .section-card__list {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-tytle {
+        font-size: 5.2vw;
+        margin-bottom: 3.3vw;
+    }
+
+    .section-card {
+        padding: 3vw 3vw 3vw 3vw;
+        margin-bottom: 5vw;
+    }
+
+    .section-card__list {
+        font-size: 3.3vw;
+    }
+}
