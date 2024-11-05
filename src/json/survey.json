@@ -1,63 +1,65 @@
 {
+  "questions": {
     "questions": [
-        {
-            "questionId": 0,
-            "totalNumberOfVotes": 0,
-            "question": "Как вам мой сайт?",
-            "answers": [
-                {
-                    "answerId": 0,
-                    "numberOfVotes": 0,
-                    "answer": "Хороший"
-                },
-                {
-                    "answerId": 1,
-                    "numberOfVotes": 0,
-                    "answer": "Средний"
-                },
-                {
-                    "answerId": 2,
-                    "numberOfVotes": 0,
-                    "answer": "Плохой"
-                }
-            ]
-        },
-        {
-            "questionId": 1,
-            "totalNumberOfVotes": 0,
-            "question": "Сколько звёзд вы дадите от 0 до 5?",
-            "answers": [
-                {
-                    "answerId": 0,
-                    "numberOfVotes": 0,
-                    "answer": "0"
-                },
-                {
-                    "answerId": 1,
-                    "numberOfVotes": 0,
-                    "answer": "1"
-                },
-                {
-                    "answerId": 2,
-                    "numberOfVotes": 0,
-                    "answer": "2"
-                },
-                {
-                    "answerId": 3,
-                    "numberOfVotes": 0,
-                    "answer": "3"
-                },
-                {
-                    "answerId": 4,
-                    "numberOfVotes": 0,
-                    "answer": "4"
-                },
-                {
-                    "answerId": 5,
-                    "numberOfVotes": 0,
-                    "answer": "5"
-                }
-            ]
-        }
+      {
+        "questionId": 0,
+        "totalNumberOfVotes": 2,
+        "question": "Как вам мой сайт?",
+        "answers": [
+          {
+            "answerId": 0,
+            "numberOfVotes": 2,
+            "answer": "Хороший"
+          },
+          {
+            "answerId": 1,
+            "numberOfVotes": 0,
+            "answer": "Средний"
+          },
+          {
+            "answerId": 2,
+            "numberOfVotes": 0,
+            "answer": "Плохой"
+          }
+        ]
+      },
+      {
+        "questionId": 1,
+        "totalNumberOfVotes": 2,
+        "question": "Сколько звёзд вы дадите от 0 до 5?",
+        "answers": [
+          {
+            "answerId": 0,
+            "numberOfVotes": 1,
+            "answer": "0"
+          },
+          {
+            "answerId": 1,
+            "numberOfVotes": 0,
+            "answer": "1"
+          },
+          {
+            "answerId": 2,
+            "numberOfVotes": 0,
+            "answer": "2"
+          },
+          {
+            "answerId": 3,
+            "numberOfVotes": 0,
+            "answer": "3"
+          },
+          {
+            "answerId": 4,
+            "numberOfVotes": 0,
+            "answer": "4"
+          },
+          {
+            "answerId": 5,
+            "numberOfVotes": 1,
+            "answer": "5"
+          }
+        ]
+      }
     ]
+  }
 }
