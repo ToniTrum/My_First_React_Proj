@@ -77,3 +77,60 @@
 .section-survey__form__answer-list__answer__percent {
     font-size: 1.8vw;
 }
+
+@media (max-width: 800px) {
+    .survey-title {
+        font-size: 5.2vw;
+    }
+
+    .section-survey {
+        padding: 3vw 3vw 3vw 3vw;
+        margin-bottom: 4vw;
+    }
+
+    .section-survey__form__question {
+        font-size: 4.3vw;
+        margin-bottom: 3vw;
+    }
+
+    .section-survey__form__answer-list__answer__button {
+        width: 14%;
+        height: 5.5vw;
+        font-size: 2.1vw;
+    }
+
+    .section-survey__form__answer-list__answer__progress {
+        height: 5.5vw;
+        margin-right: 1%;
+    }
+
+    .section-survey__form__answer-list__answer__percent {
+        font-size: 2.1vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-survey {
+        margin-bottom: 5vw;
+    }
+
+    .section-survey__form__question {
+        margin-bottom: 3.2vw;
+    }
+
+    .section-survey__form__answer-list__answer__button {
+        width: 18%;
+        height: 6vw;
+        font-size: 2.8vw;
+        margin-right: 0.7%;
+    }
+
+    .section-survey__form__answer-list__answer__progress {
+        height: 6vw;
+        margin-right: 1%;
+    }
+
+    .section-survey__form__answer-list__answer__percent {
+        font-size: 2.8vw;
+    }
+}

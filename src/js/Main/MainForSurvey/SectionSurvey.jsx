@@ -25,7 +25,12 @@ const SectionSurvey = ({ questions, handleClick }) => {
 
     const computeProgressBarWidth = ({questionIndex, answerIndex}) => {
         const percent = computeVotesPercent({questionIndex, answerIndex})
-        const progressBarWidth = percent * 80 / 100
+
+        let progressBarMaxPercent = 81
+        if (window.innerWidth <= 400) progressBarMaxPercent = 70
+        else if (window.innerWidth <= 800) progressBarMaxPercent = 76
+
+        const progressBarWidth = percent * progressBarMaxPercent / 100
         return progressBarWidth
     }
 

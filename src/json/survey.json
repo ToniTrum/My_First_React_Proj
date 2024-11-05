@@ -96,12 +96,12 @@
       },
       {
         "questionId": 4,
-        "totalNumberOfVotes": 1,
+        "totalNumberOfVotes": 2,
         "question": "Какой фреймворк для frontend-разработки вы предпочитаете больше всего?",
         "answers": [
           {
             "answerId": 0,
-            "numberOfVotes": 1,
+            "numberOfVotes": 2,
             "answer": "React"
           },
           {
@@ -118,7 +118,7 @@
       },
       {
         "questionId": 4,
-        "totalNumberOfVotes": 3,
+        "totalNumberOfVotes": 4,
         "question": "Ваш любимый язык программирования",
         "answers": [
           {
@@ -138,7 +138,7 @@
           },
           {
             "answerId": 3,
-            "numberOfVotes": 1,
+            "numberOfVotes": 2,
             "answer": "C#"
           },
           {
