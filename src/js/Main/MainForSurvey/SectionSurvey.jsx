@@ -57,10 +57,10 @@ const SectionSurvey = ({ questions, handleClick }) => {
                                         className="section-survey__form__answer-list__answer__progress"
                                         initial={{width: 0}}
                                         animate={{width: `${computeProgressBarWidth({questionIndex, answerIndex})}%`}}
-                                        transition={{duration: 1}} >
-                                            
-                                        </motion.div>
-                                        {computeVotesPercent({questionIndex, answerIndex})}
+                                        transition={{duration: 1}} />
+                                        <h2 className='section-survey__form__answer-list__answer__percent'>
+                                            {`${computeVotesPercent({questionIndex, answerIndex})}%`}
+                                        </h2>
                                     </>
                                 )}
                             </div>

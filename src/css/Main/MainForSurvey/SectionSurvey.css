@@ -32,6 +32,7 @@
 .section-survey__form__answer-list__answer {
     margin-bottom: 0.3vw;
     display: flex;
+    align-items: center;
 }
 
 .section-survey__form__answer-list__answer:last-child{
@@ -68,4 +69,9 @@
     display: inline-block;
     height: 4vw;
     background-color: #08e0dc;
+    margin-right: 0.8%;
+}
+
+.section-survey__form__answer-list__answer__percent {
+    font-size: 2rem;
 }
