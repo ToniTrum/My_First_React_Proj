@@ -1,4 +1,4 @@
-import '../../../css/Main/MAin.css'
+import '../../../css/Main/Main.css'
 
 import SectionTitle from './SectionTitle.jsx'
 import SectionOrbit from './SectionOrbit/SectionOrbit.jsx'
