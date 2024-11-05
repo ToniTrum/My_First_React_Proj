@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import $ from 'jquery';
 
 const MainForSurvey = () => {
-    const [questions, setQuestions] = useState({ questions: [] }); // Измените начальное состояние на объект
+    const [ questions, setQuestions ] = useState({ questions: [] })
 
     useEffect(() => {
         $.ajax({
@@ -12,13 +12,13 @@ const MainForSurvey = () => {
             method: 'GET',
             dataType: 'json',
             success: (data) => {
-                setQuestions(data); // Установите объект с вопросами
+                setQuestions(data)
             },
             error: (error) => {
                 console.error("Ошибка при загрузке данных:", error);
             }
-        });
-    }, []);
+        })
+    }, [])
 
     const handleClick = ({ questionIndex, answerIndex }) => {
         if (questions.questions.length > 0) {
@@ -51,7 +51,7 @@ const MainForSurvey = () => {
                     setQuestions(data)
                 },
                 error: (error) => {
-                    console.error("Ошибка при обновлении данных:", error);
+                    console.error("Ошибка при обновлении данных:", error)
                 }
             })
         }
@@ -63,7 +63,7 @@ const MainForSurvey = () => {
             <h1 className='survey-title'>Опрос</h1>
             <SectionSurvey questions={questions} handleClick={handleClick} />
         </main>
-    );
-};
+    )
+}
 
 export default MainForSurvey;
