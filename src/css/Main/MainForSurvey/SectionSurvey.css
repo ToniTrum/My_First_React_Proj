@@ -6,7 +6,7 @@
 
 .section-survey {
     border: 0.2vw solid #5fdefbda;
-    border-radius: 10%;
+    border-radius: 4%;
     padding: 2vw 2vw 2vw 2vw;
 
     display: flex;
@@ -42,7 +42,7 @@
 .section-survey__form__answer-list__answer__button {
     width: 10%;
     height: 4vw;
-    font-size: 1.3rem;
+    font-size: 1.5vw;
 
     border: 0;
     padding: 0;
@@ -73,5 +73,5 @@
 }
 
 .section-survey__form__answer-list__answer__percent {
-    font-size: 2rem;
+    font-size: 1.8vw;
 }
