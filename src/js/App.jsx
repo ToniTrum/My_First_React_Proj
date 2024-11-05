@@ -4,8 +4,9 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './Header/Header.jsx'
 import Footer from './Footer/Footer.jsx'
 
-import MainForIndex from './MainForIndex/Main.jsx'
-import MainForAbout from './MainForAbout/Main.jsx'
+import MainForIndex from './Main/MainForIndex/Main.jsx'
+import MainForAbout from './Main/MainForAbout/Main.jsx'
+import MainForSurvey from './Main/MainForSurvey/Main.jsx'
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				{/* Route -- связывают сегменты URL с компонентами, загрузкой данных */}
 				<Route path='/' element={<MainForIndex />} />
 				<Route path='/about' element={<MainForAbout />} />
+				<Route path='/survey' element={<MainForSurvey />} />
 			</Routes>
 
 			<Footer />

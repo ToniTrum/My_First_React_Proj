@@ -1,4 +1,4 @@
-import '../../../css/MainForIndex/SectionOrbit/Satellites.css'
+import '../../../../css/Main/MainForIndex/SectionOrbit/Satellites.css'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import satellitesData from './satellitesData'

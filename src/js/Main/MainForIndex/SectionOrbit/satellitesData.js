@@ -1,9 +1,10 @@
-import reactLogo from '../../../img/react-logo.svg'
-import viteLogo from '../../../img/vite-logo.svg'
-import javaScriptLogo from '../../../img/javascript-logo.png'
-import framerMotionLogo from '../../../img/framer_motion-logo.svg'
-import htmlLogo from '../../../img/html-logo.png'
-import cssLogo from '../../../img/css-logo.png'
+import reactLogo from '../../../../img/react-logo.svg'
+import viteLogo from '../../../../img/vite-logo.svg'
+import javaScriptLogo from '../../../../img/javascript-logo.png'
+import framerMotionLogo from '../../../../img/framer_motion-logo.svg'
+import htmlLogo from '../../../../img/html-logo.png'
+import cssLogo from '../../../../img/css-logo.png'
+import jQueryLogo from '../../../../img/jquery-logo.svg'
 
 
 const satellitesData = [
@@ -42,6 +43,12 @@ const satellitesData = [
         "img": cssLogo,
         "alt": "CSS logo",
         "href": "https://css3.com/"
+    },
+    {
+        "className": "jquery",
+        "img": jQueryLogo,
+        "alt": "jQuery logo",
+        "href": "https://jquery.com/"
     },
 ]
 

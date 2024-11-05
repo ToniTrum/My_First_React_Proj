@@ -1,4 +1,4 @@
-import '../../css/MainForIndex/SectionTitle.css'
+import '../../../css/Main/MainForIndex/SectionTitle.css'
 
 const SectionTitle = () => {
     return (

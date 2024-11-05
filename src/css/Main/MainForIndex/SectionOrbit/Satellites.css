@@ -33,3 +33,7 @@
 .css:hover {
     filter: drop-shadow(0 0 2em #384aef);
 }
+
+.jquery:hover {
+    filter: drop-shadow(0 0 2em #006eff);
+}
