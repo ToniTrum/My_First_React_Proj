@@ -7,7 +7,9 @@
 .section-survey {
     border: 0.2vw solid #5fdefbda;
     border-radius: 4%;
+
     padding: 2vw 2vw 2vw 2vw;
+    margin-bottom: 4vw;
 
     display: flex;
     flex-flow: column;

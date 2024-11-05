@@ -10,7 +10,7 @@ import MainForSurvey from './Main/MainForSurvey/Main.jsx'
 
 function App() {
 	return (
-		<>
+		<div className='App'>
 			<Header />
 
 			{/* Всякий раз, когда местоположение изменяется, <Routes> просматривает все свои 
@@ -24,7 +24,7 @@ function App() {
 			</Routes>
 
 			<Footer />
-		</>
+		</div>
 	)
 }
 

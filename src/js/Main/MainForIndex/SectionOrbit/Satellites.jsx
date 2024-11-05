@@ -87,10 +87,10 @@ const Satellites = ({ellipseRef}) => {
         <>
             {satellitesData.map((satellite, index) => (
                 <motion.a
+                key={index}
                 href={satellite.href}
                 target='_blank' >
                     <motion.img
-                    key={index}
                     className={`section-orbit__satellite ${satellite.className}`}
                     src={satellite.img}
                     alt={satellite.alt}
