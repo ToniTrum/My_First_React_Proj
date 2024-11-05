@@ -10,7 +10,7 @@ const SectionSurvey = ({ questions, handleClick }) => {
             ...prevSelectedAnswer,
             [questionIndex]: answerIndex
         }))
-        // handleClick({ questionIndex, answerIndex })
+        handleClick({ questionIndex, answerIndex })
     }
 
     const computeVotesPercent = ({questionIndex, answerIndex}) => {

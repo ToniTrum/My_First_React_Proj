@@ -3,7 +3,7 @@
     "questions": [
       {
         "questionId": 0,
-        "totalNumberOfVotes": 2,
+        "totalNumberOfVotes": 3,
         "question": "Как вам мой сайт?",
         "answers": [
           {
@@ -18,14 +18,14 @@
           },
           {
             "answerId": 2,
-            "numberOfVotes": 0,
+            "numberOfVotes": 1,
             "answer": "Плохой"
           }
         ]
       },
       {
         "questionId": 1,
-        "totalNumberOfVotes": 2,
+        "totalNumberOfVotes": 4,
         "question": "Сколько звёзд вы дадите от 0 до 5?",
         "answers": [
           {
@@ -35,12 +35,12 @@
           },
           {
             "answerId": 1,
-            "numberOfVotes": 0,
+            "numberOfVotes": 1,
             "answer": "1"
           },
           {
             "answerId": 2,
-            "numberOfVotes": 0,
+            "numberOfVotes": 1,
             "answer": "2"
           },
           {
