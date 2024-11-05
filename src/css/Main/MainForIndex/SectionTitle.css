@@ -40,3 +40,10 @@
     50% {border-color: #08e0dc}
     100% {border-color: transparent}
 }
+
+@media (max-width: 800px) {
+    .section-title__title {
+        font-size: 5.2vw;
+        border-right: 0.2;
+    }
+}

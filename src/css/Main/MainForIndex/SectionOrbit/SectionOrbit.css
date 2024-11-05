@@ -30,3 +30,45 @@ ellipse {
 		stroke-width: 1.7;
 	}
 }
+
+@media (max-width: 800px) {
+	ellipse {
+		filter: drop-shadow(0.1vw 0.2vw 0.2vw gray);
+	}
+
+	@keyframes blinking {
+		0% {
+			stroke: #d3d3d374;
+			stroke-width: 1.3;
+		}
+		50% {
+			stroke: #e9e9e9;
+			stroke-width: 2;
+		}
+		100% {
+			stroke: #d3d3d374;
+			stroke-width: 1.3;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	ellipse {
+		filter: drop-shadow(0.05vw 0.1vw 0.1vw gray);
+	}
+
+	@keyframes blinking {
+		0% {
+			stroke: #d3d3d374;
+			stroke-width: 1;
+		}
+		50% {
+			stroke: #e9e9e9;
+			stroke-width: 1.5;
+		}
+		100% {
+			stroke: #d3d3d374;
+			stroke-width: 1;
+		}
+	}
+}

@@ -92,7 +92,7 @@
 
     .burger-menu_menu {
         top: 12.4vw;
-        width: 50%;
+        width: 90%;
     }
 }
 
@@ -116,6 +116,5 @@
 
     .burger-menu_menu {
         top: 15.5vw;
-        width: 60%;
     }
 }
