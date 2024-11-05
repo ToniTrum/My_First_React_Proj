@@ -8,7 +8,7 @@ const MainForSurvey = () => {
 
     useEffect(() => {
         $.ajax({
-            url: 'http://localhost:5174/questions',
+            url: 'https://my-json-server.typicode.com/ToniTrum/My_First_React_Proj/questions',
             method: 'GET',
             dataType: 'json',
             success: (data) => {
@@ -43,7 +43,7 @@ const MainForSurvey = () => {
             }
 
             $.ajax({
-                url: `http://localhost:5174/questions`,
+                url: `https://my-json-server.typicode.com/ToniTrum/My_First_React_Proj/questions`,
                 method: 'PUT',
                 contentType: 'application/json',
                 data: JSON.stringify(updatedQuestions),
