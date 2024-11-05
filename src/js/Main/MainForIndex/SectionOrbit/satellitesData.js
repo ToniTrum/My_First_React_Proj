@@ -5,6 +5,7 @@ import framerMotionLogo from '../../../../img/framer_motion-logo.svg'
 import htmlLogo from '../../../../img/html-logo.png'
 import cssLogo from '../../../../img/css-logo.png'
 import jQueryLogo from '../../../../img/jquery-logo.svg'
+import typicodeLogo from '../../../../img/typicode-logo.jpg'
 
 
 const satellitesData = [
@@ -49,6 +50,12 @@ const satellitesData = [
         "img": jQueryLogo,
         "alt": "jQuery logo",
         "href": "https://jquery.com/"
+    },
+    {
+        "className": "typicode",
+        "img": typicodeLogo,
+        "alt": "typicode logo",
+        "href": "https://my-json-server.typicode.com/"
     },
 ]
 
